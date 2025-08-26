@@ -937,18 +937,22 @@ body.dark .about__title{ color:#fff; } /* if you later add dark theme */
   }
 }
 
+/* ================================================ CONTACT PAGE ================================================ */
 /* ===== Contact / Comment + Map ===== */
 .contact-block{ color:#fff; padding: clamp(48px, 7vw, 80px) 0; }
 
+/* Info row: let it wrap gracefully */
 .contact-info{
   display:grid;
-  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* was: repeat(2, minmax(260px, 1fr)) */
   gap: clamp(16px, 4vw, 40px);
   align-items:center;
 }
-.info-card{
-  display:flex; align-items:center; gap:16px;
-}
+
+/* Prevent long strings from pushing the card wider than the viewport */
+.info-card{ display:flex; align-items:center; gap:16px; min-width:0; }
+.info-card__value{ color:#ccc; line-height:1.6; overflow-wrap:anywhere; word-break:break-word; }
+
 .info-card__icon{
   width:86px; height:86px; border-radius:50%;
   display:grid; place-items:center;
@@ -956,7 +960,6 @@ body.dark .about__title{ color:#fff; } /* if you later add dark theme */
   color:#2f6cff;
 }
 .info-card__label{ font-weight:800; margin-bottom:4px; }
-.info-card__value{ color:#ccc; line-height:1.6; }
 
 .contact-sep{
   margin: clamp(20px, 5vw, 36px) 0;
@@ -1023,12 +1026,14 @@ body.dark .about__title{ color:#fff; } /* if you later add dark theme */
 @media (max-width: 1000px){
   .contact-grid{ grid-template-columns: 1fr; }
   .map-wrap iframe{ height:420px; }
+  .contact-info{ grid-template-columns: 1fr; }
+
 }
 @media (max-width: 640px){
   .comment-form .form-row{ grid-template-columns: 1fr; }
   .info-card__icon{ width:74px; height:74px; }
 }
-
+/* ================================================ TEMPLATES PAGE ================================================ */
 /* Section shell (uses your dark gradient look) */
 .tabs-section{
   width:100%;
@@ -1206,7 +1211,7 @@ body.dark .about__title{ color:#fff; } /* if you later add dark theme */
 .more-item .t{ font-weight:800; font-size:.98rem; margin:0 0 2px; }
 .more-item .c{ font-size:.85rem; color:#9eb0d9; }
 
-/* ================================================== BLOG ================================================== */
+/* ================================================== BLOG PAGE ================================================== */
 
 .blog-section {
   padding: 60px 20px;
@@ -1446,7 +1451,7 @@ body.dark .about__title{ color:#fff; } /* if you later add dark theme */
 }
 
 
-/* ================================================== BLOG SINGLE ================================================== */
+/* ================================================== BLOG SINGLE PAGE ================================================== */
 
 .entry-section { padding: 60px 0 60px 0; }
 .entry-container { width: min(1200px, 92%); margin-inline: auto; }
