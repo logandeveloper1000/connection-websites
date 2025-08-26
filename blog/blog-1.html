@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Connection Websites - Blog</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+    <!-- Header / Nav -->
+    <header class="site-header" id="top">
+        <nav class="nav">
+            <a class="brand" href="index.html">
+            <img src="../img/logo-noback-whiteonblue-1920x1920.png" alt="Connection Websites logo" class="brand__logo" />
+            <span class="brand__text">Connection Websites</span>
+            </a>
+
+            <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+            <span class="nav__bar"></span>
+            <span class="nav__bar"></span>
+            <span class="nav__bar"></span>
+            </button>
+
+            <ul class="nav__links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About Us</a></li>
+            <li><a href="../services.html">Services</a></li>
+            <li><a href="../templates.html">Templates</a></li>
+            <li><a href="../blog.html" class="is-active">Blog</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../login.html" class="btn btn--outline">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+    <div class="container">
+        <h1 class="page-hero__title">Article</h1>
+        <p class="page-hero__subtitle">Responsive Web Design Creating Mobile-Friendly Web Applications</p>
+    </div>
+    </section>
+
+    <!-- ====== Article View (unique class names) ====== -->
+    <section class="entry-section">
+    <div class="entry-container">
+        <div class="entry-layout">
+        <!-- Main content -->
+        <article class="entry-main">
+            <figure class="entry-hero">
+            <img src="../img/blog/blog-1.jpg" alt="Light trails on a road symbolizing website speed">
+            </figure>
+
+            <div class="entry-meta">29 January 2024 · 0 comments</div>
+            <h1 class="entry-title">Responsive Web Design Creating Mobile-Friendly Web Applications</h1>
+
+            <div class="entry-content">
+            <p>
+                Responsive web design is an approach to web development that focuses on creating websites and web applications that provide an optimal viewing experience across different devices and screen sizes. It ensures that the content and layout of a website automatically adjust and adapt to fit the screen size, whether it's a desktop, tablet, or mobile device.
+            </p>
+            <p>
+                Here are some key principles and techniques for creating mobile-friendly web applications using responsive web design:
+            </p>
+            <p>
+                1. Fluid Grids: Use fluid grids that automatically adjust the size and positioning of elements based on the screen size. This allows the content to flow and resize proportionally, ensuring a consistent and visually appealing experience on different devices.
+            </p>
+            <p>
+                2. Flexible Images: Images should also be flexible so that they can scale and resize based on the screen size. Use CSS techniques like max-width: 100% to ensure that images don't overflow or distort the layout on smaller screens.
+            </p>
+            <p>
+                3. Media Queries: Media queries are CSS rules that allow you to apply different styles based on the characteristics of the device or screen size. Use media queries to define specific styles for different breakpoints, such as adjusting font sizes, hiding or showing certain elements, or reorganizing the layout.
+            </p>
+            <p>
+                4. Mobile-first Approach: Start the design process by focusing on the mobile experience first. This ensures that the most important content is prioritized and that the layout and design are optimized for smaller screens. Then, progressively enhance the design for larger screens using media queries.
+            </p>
+            <p>
+                5. Touch-friendly Interactions: Consider the touch capabilities of mobile devices when designing interactions. Use larger touch targets for buttons and links, incorporate swipe gestures, and avoid using hover effects that don't work on touch screens.
+            </p>
+            <p>
+                6. Performance Optimization: Mobile devices often have slower internet connections and limited processing power. Optimize your web application by minimizing file sizes, reducing the number of HTTP requests, and using techniques like lazy loading to improve performance.
+            </p>
+            <p>
+                7. Testing and Debugging: Test your web application on different devices and screen sizes to ensure that it looks and functions as expected. Use browser developer tools and emulators to debug and fix any layout or functionality issues.
+            </p>
+            <p>
+                By following these principles and techniques, you can create mobile-friendly web applications that provide a seamless user experience across devices. Responsive web design not only improves usability but also helps with SEO, as search engines prioritize mobile-friendly websites in their rankings.
+            </p>
+            
+            </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="entry-aside">
+            <h3 class="aside-title">See Our Other Posts</h3>
+
+            <!-- Empty container; JS will populate -->
+            <nav class="hotlist" id="popularPosts"></nav>
+        </aside>
+        </div>
+    </div>
+    </section>
+
+    <!-- === Footer === -->
+    <footer class="footer">
+    <div class="container footer__grid">
+        
+        <!-- Contact -->
+        <div class="footer__col">
+        <h4 class="footer__title">Contact With Us</h4>
+        <p><span class="footer__icon">✉</span> contact@connectionwebsites.com</p>
+        <p><span class="footer__icon">📍</span> Orlando, FL US</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer__col">
+        <h4 class="footer__title">Quick Links</h4>
+        <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </div>
+
+        <!-- Latest News -->
+        <div class="footer__col">
+        <h4 class="footer__title">Latest News</h4>
+        <ul class="footer__news">
+            <li>
+            <a href="blog00001.html">Choosing the Right Technology Stack for Web Application Development</a>
+            <time>January 10, 2024</time>
+            </li>
+            <li>
+            <a href="blog00002.html">Responsive Web Design: Creating Mobile-Friendly Web Applications</a>
+            <time>January 12, 2024</time>
+            </li>
+            <li>
+            <a href="blog00003.html">Web Application Security: Protecting Your Users and Data</a>
+            <time>January 30, 2024</time>
+            </li>
+        </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="footer__col">
+        <h4 class="footer__title">Follow Us On Social</h4>
+        <ul class="footer__links">
+            <li><a href="https://www.facebook.com/p/Connection-Websites-61555057978868/" target="_blank">Facebook</a></li>
+            <li><a href="https://x.com/ConnWebsites" target="_blank">X</a></li>
+            <li><a href="https://www.instagram.com/connectionwebsites/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/connection-websites" target="_blank">Linkedin</a></li>
+            <li><a href="https://www.linkedin.com/company/connection-websites" target="_blank">Pinterest</a></li>
+        </ul>
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer__bottom">
+        <p>© 2023 Connection Websites LLC. All rights reserved.</p>
+    </div>
+    </footer>
+    
+    <script src="../script/script.js"></script>
+    <script src="../script/blog-unit.js"></script>
+</body>
+</html>

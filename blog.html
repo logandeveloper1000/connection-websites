@@ -29,7 +29,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="services.html">Services</a></li>
-            <li><a href="projects.html">Projects</a></li>
+            <li><a href="templates.html">Templates</a></li>
             <li><a href="blog.html" class="is-active">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>
             <li><a href="login.html" class="btn btn--outline">Login</a></li>
@@ -45,6 +45,139 @@
     </div>
     </section>
 
+    <!-- Blog -->
+    <section class="blog-section">
+    <div class="container">
+        <!-- Left column -->
+        <div class="blog-left">
+        <div class="blog-grid" id="blogGrid"></div>
+
+        <button id="loadMore" class="load-more-btn" aria-live="polite">
+            Load More
+        </button>
+        </div>
+
+        <!-- Right column -->
+        <aside class="blog-sidebar entry-aside">
+            <div class="search-box">
+                <input id="searchInput" type="text" placeholder="Search..." aria-label="Search blog">
+            </div>
+
+            <h3 class="aside-title">See Our Other Posts</h3>
+            <!-- Same structure/classes as blog-1.html -->
+            <nav class="hotlist" id="popularPosts"></nav>
+        </aside>
+
+    </div>
+    </section>
+
+    <!-- === Footer === -->
+    <footer class="footer">
+    <div class="container footer__grid">
+        
+        <!-- Contact -->
+        <div class="footer__col">
+        <h4 class="footer__title">Contact With Us</h4>
+        <p><span class="footer__icon">✉</span> contact@connectionwebsites.com</p>
+        <p><span class="footer__icon">📍</span> Orlando, FL US</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer__col">
+        <h4 class="footer__title">Quick Links</h4>
+        <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </div>
+
+        <!-- Latest News -->
+        <div class="footer__col">
+        <h4 class="footer__title">Latest News</h4>
+        <ul class="footer__news">
+            <li>
+            <a href="blog00001.html">Choosing the Right Technology Stack for Web Application Development</a>
+            <time>January 10, 2024</time>
+            </li>
+            <li>
+            <a href="blog00002.html">Responsive Web Design: Creating Mobile-Friendly Web Applications</a>
+            <time>January 12, 2024</time>
+            </li>
+            <li>
+            <a href="blog00003.html">Web Application Security: Protecting Your Users and Data</a>
+            <time>January 30, 2024</time>
+            </li>
+        </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="footer__col">
+        <h4 class="footer__title">Follow Us On Social</h4>
+        <ul class="footer__links">
+            <li><a href="https://www.facebook.com/p/Connection-Websites-61555057978868/" target="_blank">Facebook</a></li>
+            <li><a href="https://x.com/ConnWebsites" target="_blank">X</a></li>
+            <li><a href="https://www.instagram.com/connectionwebsites/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/connection-websites" target="_blank">Linkedin</a></li>
+            <li><a href="https://www.linkedin.com/company/connection-websites" target="_blank">Pinterest</a></li>
+        </ul>
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer__bottom">
+        <p>© 2023 Connection Websites LLC. All rights reserved.</p>
+    </div>
+    </footer>
+
     <script src="script/script.js"></script>
+    <script src="script/blog.js"></script>
+
+    <script>
+        (() => {
+        const mq = window.matchMedia('(max-width: 1200px)');
+        const searchBox = document.querySelector('.search-box');
+        const blogLeft  = document.querySelector('.blog-left');
+        const blogGrid  = document.getElementById('blogGrid');
+        const sidebar   = document.querySelector('.blog-sidebar');
+
+        if (!searchBox || !blogLeft || !blogGrid || !sidebar) return;
+
+        // Remember original spot to restore later
+        const originalParent = searchBox.parentNode;
+        const originalNext   = searchBox.nextSibling; // may be null
+
+        function placeForNarrow() {
+            // Put search right above the grid
+            if (searchBox.parentNode !== blogLeft) {
+            blogLeft.insertBefore(searchBox, blogGrid);
+            searchBox.classList.add('search-top');
+            }
+        }
+
+        function restoreForWide() {
+            if (searchBox.parentNode !== originalParent) {
+            if (originalNext) originalParent.insertBefore(searchBox, originalNext);
+            else originalParent.appendChild(searchBox);
+            searchBox.classList.remove('search-top');
+            }
+        }
+
+        function update() {
+            if (mq.matches) placeForNarrow();
+            else restoreForWide();
+        }
+
+        // Initialize + listen for changes
+        update();
+        mq.addEventListener('change', update);
+        })();
+    </script>
+
+
 </body>
 </html>
