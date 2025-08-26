@@ -159,9 +159,12 @@ body{
   color:#eaf0ff;
 }
 .feature__icon{
-  width:110px; height:110px; margin:0 auto 12px;
-  border-radius:999px; outline: 6px solid rgba(255,255,255,.12);
-  display:grid; place-items:center;
+  width:80px; height:80px; margin:0 auto 12px;
+  border-radius:999px; outline: 4px solid rgba(255,255,255,.12);
+  display:grid; place-items:center; padding: 5px;
+}
+.feature__icon img{
+  width: 100%;
 }
 .feature h3{
   margin:6px 0 8px;
@@ -206,7 +209,9 @@ body{
   .hero__content{ margin-bottom:260px; }
 
 }
+@media (max-width: 1200px){
 
+}
 /* ===== About / Mission ===== */
 .section-pad {
   padding: 234px 0 150px 0; /* top | right | bottom | left */
