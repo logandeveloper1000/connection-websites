@@ -37,10 +37,53 @@
         </nav>
     </header>
 
-    <div class="page-hero" style="height: 100vh;">
+    <div class="login-background">
+    <div class="login-wrap">
+        <form class="login-card" autocomplete="on">
+        <h1 class="login-title">Welcome back</h1>
+        <p class="login-sub">Sign in to your Connection Websites account</p>
 
+        <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
 
+        <label class="field">
+            <span>Password</span>
+            <div class="password">
+            <input type="password" name="password" placeholder="••••••••" required minlength="6" id="pw">
+            <button type="button" class="pw-toggle" aria-label="Show password">Show</button>
+            </div>
+        </label>
+
+        <div class="login-row">
+            <label class="remember">
+            <!--<input type="checkbox" name="remember"> Remember me-->
+            </label>
+            <a href="#" class="forgot">Forgot password?</a>
+        </div>
+
+        <button class="btn btn--primary btn--lg login-btn" type="submit">Sign In</button>
+
+        <div class="divider"><span>or</span></div>
+
+        <a href="#" class="btn btn--outline btn--lg login-alt">Continue with Google</a>
+        <p class="login-meta">New here? <a href="signup.html">Create an account</a></p>
+        </form>
     </div>
+    </div>
+
   <script src="script/script.js"></script>
+  <script>
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.pw-toggle');
+        if (!btn) return;
+        const pw = document.getElementById('pw');
+        const isHidden = pw.type === 'password';
+        pw.type = isHidden ? 'text' : 'password';
+        btn.textContent = isHidden ? 'Hide' : 'Show';
+        btn.setAttribute('aria-label', isHidden ? 'Hide password' : 'Show password');
+    });
+  </script>
 </body>
 </html>

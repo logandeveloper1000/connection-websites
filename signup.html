@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Connection Websites - Sign Up</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="site-header" id="top">
+    <nav class="nav">
+      <a class="brand" href="index.html">
+        <img src="img/logo-noback-whiteonblue-1920x1920.png" alt="Connection Websites logo" class="brand__logo" />
+        <span class="brand__text">Connection Websites</span>
+      </a>
+
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="nav__bar"></span>
+        <span class="nav__bar"></span>
+        <span class="nav__bar"></span>
+      </button>
+
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="templates.html">Templates</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" class="btn btn--outline">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero with signup form -->
+  <div class="login-background">
+    <div class="login-wrap">
+      <form class="login-card" autocomplete="on">
+        <h1 class="login-title">Create an Account</h1>
+        <p class="login-sub">Sign up to get started with Connection Websites</p>
+
+        <label class="field">
+          <span>Full Name</span>
+          <input type="text" name="name" placeholder="John Doe" required>
+        </label>
+
+        <label class="field">
+          <span>Email</span>
+          <input type="email" name="email" placeholder="you@example.com" required>
+        </label>
+
+        <label class="field">
+          <span>Password</span>
+          <div class="password">
+            <input type="password" name="password" placeholder="••••••••" required minlength="6" id="pw">
+            <button type="button" class="pw-toggle">Show</button>
+          </div>
+        </label>
+
+        <label class="field">
+          <span>Confirm Password</span>
+          <div class="password">
+            <input type="password" name="confirmPassword" placeholder="••••••••" required minlength="6" id="pw-confirm">
+            <button type="button" class="pw-toggle">Show</button>
+          </div>
+        </label>
+
+        <button class="btn btn--primary btn--lg login-btn" type="submit">Sign Up</button>
+
+        <p class="login-meta">Already have an account? <a href="login.html">Sign in</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script/script.js"></script>
+  <script>
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.pw-toggle');
+        if (!btn) return;
+        const input = btn.previousElementSibling; // the input before the button
+        const isHidden = input.type === 'password';
+        input.type = isHidden ? 'text' : 'password';
+        btn.textContent = isHidden ? 'Hide' : 'Show';
+    });
+
+  </script>
+</body>
+</html>
