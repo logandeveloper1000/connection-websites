@@ -1511,7 +1511,7 @@ body.dark .about__title{ color:#fff; } /* if you later add dark theme */
 
 .login-background {
   min-height: 100vh;              /* full screen height */
-  padding-top: 110px;             /* space for nav */
+  padding-top: 40px;             /* space for nav */
   display: flex;                  /* flex for centering */
   align-items: center;            /* vertical center */
   justify-content: center;        /* horizontal center */
