@@ -45,62 +45,29 @@
     </div>
     </section>
 
-    <!-- === Blog / From the Blog === -->
-    <section id="blog" class="blog blog-pad">
-    <div class="container blog__head">
-        <p class="blog__kicker">Don’t Miss Latest News</p>
-        <h2 class="blog__title">From the Blog</h2>
-        <p class="blog__sub">Exploring The World, One Article at a Time</p>
-    </div>
+    <!-- Blog -->
+    <section class="blog-section">
+    <div class="container">
+        <!-- Left column -->
+        <div class="blog-left">
+        <div class="blog-grid" id="blogGrid"></div>
 
-    <div class="container post-grid">
-        <!-- Card 1 -->
-        <article class="post-card">
-        <a class="post-card__media" href="blog/blog-5.html">
-            <img src="img/blog/blog-5.jpg" alt="Keyboard with code lights">
-        </a>
-        <time class="post-card__date" datetime="2024-01-10">January 10, 2024</time>
-        <h3 class="post-card__title">
-            <a href="blog/blog-5.html">Reasons to Have a Fast Website</a>
-        </h3>
-        <a class="post-card__more" href="blog/blog-5.html">Read More</a>
-        </article>
+        <button id="loadMore" class="load-more-btn" aria-live="polite">
+            Load More
+        </button>
+        </div>
 
-        <!-- Card 2 -->
-        <article class="post-card">
-        <a class="post-card__media" href="blog/blog-4.html">
-            <img src="img/blog/blog-4.jpg" alt="Laptop and phones on desk">
-        </a>
-        <time class="post-card__date" datetime="2024-01-10">January 10, 2024</time>
-        <h3 class="post-card__title">
-            <a href="blog/blog-4.html">Testing Your Website To Know If it's Running Well</a>
-        </h3>
-        <a class="post-card__more" href="blog/blog-4.html">Read More</a>
-        </article>
+        <!-- Right column -->
+        <aside class="blog-sidebar entry-aside">
+            <div class="search-box">
+                <input id="searchInput" type="text" placeholder="Search..." aria-label="Search blog">
+            </div>
 
-        <!-- Card 3 -->
-        <article class="post-card">
-        <a class="post-card__media" href="blog/blog-3.html">
-            <img src="img/blog/blog-3.jpg" alt="Security screen">
-        </a>
-        <time class="post-card__date" datetime="2024-01-10">January 10, 2024</time>
-        <h3 class="post-card__title">
-            <a href="blog/blog-3.html">What Type of E-commerce Model Should I Choose For My Business</a>
-        </h3>
-        <a class="post-card__more" href="blog/blog-3.html">Read More</a>
-        </article>
+            <h3 class="aside-title">See Our Other Posts</h3>
+            <!-- Same structure/classes as blog-1.html -->
+            <nav class="hotlist" id="popularPosts"></nav>
+        </aside>
 
-        <!-- Card 4 -->
-        <article class="post-card">
-        <a class="post-card__media" href="blog/blog-2.html">
-            <img src="img/blog/blog-2.jpg" alt="Analytics on laptop">
-        </a>
-        <time class="post-card__date" datetime="2024-01-10">January 10, 2024</time>
-        <h3 class="post-card__title">
-            <a href="blog/blog-2.html">Why Having an App is So Important These Days</a>
-        </h3>
-        <a class="post-card__more" href="blog/blog-2.html">Read More</a>
-        </article>
     </div>
     </section>
 
