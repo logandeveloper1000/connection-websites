@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Connection Websites - Home</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+    <!-- Header / Nav -->
+    <header class="site-header" id="top">
+        <nav class="nav">
+            <a class="brand" href="index.html">
+            <img src="img/logo-noback-whiteonblue-1920x1920.png" alt="Connection Websites logo" class="brand__logo" />
+            <span class="brand__text">Connection <strong>Websites</strong></span>
+            </a>
+
+            <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+            <span class="nav__bar"></span>
+            <span class="nav__bar"></span>
+            <span class="nav__bar"></span>
+            </button>
+
+            <ul class="nav__links">
+            <li><a href="index.html" class="is-active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html" class="btn btn--outline">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <!-- background handled in CSS -->
+        <div class="hero__overlay"></div>
+
+        <div class="container hero__content">
+            <p class="eyebrow">Innovate, Develop &amp; Transform</p>
+
+            <h1 class="hero__title">
+            Crafting Digital Excellence<br />
+            <span class="break">One Line of Code at a Time</span>
+            </h1>
+
+            <a href="#get-started" class="btn btn--primary btn--lg">
+            Get Started <span class="arrow">→</span>
+            </a>
+        </div>
+
+        <!-- Feature Cards (the blue bar) -->
+        <div class="container features">
+            <article class="feature">
+            <div class="feature__icon">
+                <!-- Hand pointer -->
+                <svg width="52" height="52" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M6 12.5V9.75a1.75 1.75 0 1 1 3.5 0v2.75" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M9.5 12V6.75a1.75 1.75 0 1 1 3.5 0V12" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M13 12V7.75a1.75 1.75 0 1 1 3.5 0V12" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+                <path d="M16.5 12.5V9.75a1.75 1.75 0 1 1 3.5 0v3.25c0 3.59-2.91 6.5-6.5 6.5H11c-2.76 0-5-2.24-5-5v-2.75" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <h3>Choose</h3>
+            <p>Choose an Idea That Fits</p>
+            </article>
+
+            <article class="feature">
+            <div class="feature__icon">
+                <!-- Phone -->
+                <svg width="52" height="52" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <rect x="7" y="2" width="10" height="20" rx="2.5" stroke="white" stroke-width="1.6"/>
+                <circle cx="12" cy="18" r="1" fill="white"/>
+                </svg>
+            </div>
+            <h3>Development</h3>
+            <p>We Develop It Based On Your Needs</p>
+            </article>
+
+            <article class="feature">
+            <div class="feature__icon">
+                <!-- Rocket -->
+                <svg width="52" height="52" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M14 10L4 20l2 2 10-10" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M13 11c1.5-4 4-6 8-7-1 4-3 6.5-7 8l-1-1z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="17.5" cy="6.5" r="1.2" fill="white"/>
+                </svg>
+            </div>
+            <h3>Launch</h3>
+            <p>We Put Everything Together &amp; Launch It</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- === About / Mission === -->
+    <section id="about" class="about section-pad">
+        <div class="container about__grid">
+            <article class="about__col">
+            <p class="kicker">About Us</p>
+            <h2 class="about__title">Building Exceptional<br/>Web Experiences</h2>
+            <p class="about__body">
+                We are passionate about crafting exceptional web experiences that make a lasting impact.
+                With a team of skilled designers and developers, we specialize in creating visually stunning
+                and user-friendly…
+            </p>
+            <a href="#more-about" class="about__link">Read More About Us</a>
+            </article>
+
+            <article class="about__col about__col--right">
+            <p class="kicker">Our Mission</p>
+            <h2 class="about__title">Empowering<br/>Businesses</h2>
+            <p class="about__body">
+                Our mission is to empower businesses by providing them with innovative and customized web solutions.
+                We believe that a strong online presence is crucial in today’s digital landscape…
+            </p>
+            <a href="#more-about" class="about__link">Read More About Us</a>
+            </article>
+        </div>
+
+        <div class="container stats">
+            <div class="stat">
+            <div class="stat__icon">
+                <!-- gift -->
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" aria-hidden="true">
+                <path d="M20 12v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8m0 0h16M4 8h7m9 0h-7M7 8c-1.657 0-3-1.12-3-2.5S5.343 3 7 3c2.5 0 4 2.5 4 5m6 0c1.657 0 3-1.12 3-2.5S18.657 3 17 3c-2.5 0-4 2.5-4 5" stroke="#2f6cff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="stat__value" data-count="125">0</div>
+            <div class="stat__label">Completed Projects</div>
+            </div>
+
+            <div class="stat">
+            <div class="stat__icon">
+                <!-- clock -->
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" stroke="#2f6cff" stroke-width="1.6"/>
+                <path d="M12 7v5l3 2" stroke="#2f6cff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <div class="stat__value" data-count="6">0</div>
+            <div class="stat__label">Years of Experience</div>
+            </div>
+
+            <div class="stat">
+            <div class="stat__icon">
+                <!-- user -->
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" aria-hidden="true">
+                <circle cx="12" cy="8" r="4" stroke="#2f6cff" stroke-width="1.6"/>
+                <path d="M5 20a7 7 0 0 1 14 0" stroke="#2f6cff" stroke-width="1.6" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <div class="stat__value" data-count="218">0</div>
+            <div class="stat__label">Verified Happy Client</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- === Projects / Showcase === -->
+    <section id="projects" class="projects">
+    <!-- top banner -->
+    <div class="projects__hero">
+        <div class="container projects__hero-inner">
+        <div class="projects__copy">
+            <p class="kicker">Our Projects</p>
+            <h2 class="projects__title">Showcase</h2>
+            <p class="projects__subtitle">Discover The World With Us</p>
+        </div>
+
+        <a href="projects.html" class="btn btn--secondary btn--pill projects__cta">
+            View Our Websites
+        </a>
+        </div>
+    </div>
+
+    <!-- gallery row -->
+    <div class="container projects__grid">
+        <!-- Replace src with your real thumbnails -->
+        <a class="proj" href="#" aria-label="Website Finance Oregon">
+        <img src="img/websites/website-finance-a00001-1.jpg" alt="Website Finance Oregon">
+        </a>
+        <a class="proj" href="#" aria-label="Website Fitness Fitzaro">
+        <img src="img/websites/website-fitness-a00001-1.jpg" alt="Website Fitness Fitzaro">
+        </a>
+        <a class="proj" href="#" aria-label="Website Gaming Crox E-Sports">
+        <img src="img/websites/website-gaming-a00002-1.jpg" alt="Website Gaming Crox E-Sports">
+        </a>
+        <a class="proj" href="#" aria-label="Website Pet Pets">
+        <img src="img/websites/website-pet-a00001-1.jpg" alt="Website Pet Pets">
+        </a>
+        <a class="proj" href="#" aria-label="Website Educational Udema">
+        <img src="img/websites/website-educational-a00002-1.jpg" alt="Website Educational Udema">
+        </a>
+    </div>
+    </section>
+
+    <!-- === Dashboard / Manage Projects === -->
+    <section id="dashboard" class="dash">
+    <div class="container dash__grid">
+        <div class="dash__copy">
+        <p class="kicker">Dashboard</p>
+        <h2 class="dash__title">Manage Your Projects<br>with Ease</h2>
+        <p class="dash__text">
+            With our user-friendly and intuitive dashboard, you can effortlessly manage all your projects in one centralized location. 
+            Our dashboard provides you with real-time updates, allowing you to track the progress of your projects, collaborate with 
+            our team, and access important documents and resources. You can easily communicate with our developers, share feedback, 
+            and stay informed about project milestones and deadlines. Our goal is to streamline the web development process for you, 
+            making it efficient and transparent. Experience the convenience and control of our dashboard and take your projects to the next level.
+        </p>
+        </div>
+
+        <div class="dash__media">
+        <!-- Replace src with your real dashboard image -->
+        <img src="img/dashboard-flatkit-370x400.png" alt="Dashboard preview with charts and activity">
+        </div>
+    </div>
+    </section>
+
+    <!-- === Testimonials === -->
+    <section id="testimonials" class="testimonials testimonials-pad">
+    <div class="container">
+        <p class="kicker">Testimonials</p>
+        <h2 class="t-title">Customer Reviews</h2>
+    </div>
+
+    <div class="t-rail-wrap">
+        <button class="t-nav t-nav--prev" aria-label="Previous testimonials">
+        <!-- left arrow -->
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
+            <path d="M15 19l-7-7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        </button>
+
+        <div class="t-rail" id="t-rail" data-cards-per-view="3">
+        <!-- Card 1 -->
+        <article class="t-card">
+            <div class="t-quote">
+            <span>&#128515;</span>
+            </div>
+            <h3 class="t-card__heading">“Story of Success”</h3>
+            <p class="t-card__text">
+            They have a deep understanding of our needs and have successfully translated them into powerful software
+            solutions that have streamlined our operations and improved our overall productivity.
+            </p>
+            <div class="t-card__author">
+            <strong>Michael Rodriguez</strong>
+            <span>Customer</span>
+            </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="t-card">
+            <div class="t-quote"><span>&#128515;</span></div>
+            <h3 class="t-card__heading">“Super Creativity”</h3>
+            <p class="t-card__text">
+            Their technical prowess and creativity are commendable, and they have consistently demonstrated their
+            ability to adapt to changing project scopes and timelines.
+            </p>
+            <div class="t-card__author">
+            <strong>Emily Garcia</strong>
+            <span>Customer</span>
+            </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="t-card">
+            <div class="t-quote"><span>&#128515;</span></div>
+            <h3 class="t-card__heading">“Trustful Company”</h3>
+            <p class="t-card__text">
+            With Connection Websites by your side, you can be confident that your software development needs will be met
+            and exceeded. Trust me, you won't be disappointed!
+            </p>
+            <div class="t-card__author">
+            <strong>David Smith</strong>
+            <span>Customer</span>
+            </div>
+        </article>
+
+        <!-- Add more cards if you want to scroll further -->
+        <article class="t-card">
+            <div class="t-quote"><span>&#128515;</span></div>
+            <h3 class="t-card__heading">“Great Partnership”</h3>
+            <p class="t-card__text">Fantastic communication and delivery. We felt supported every step of the way.</p>
+            <div class="t-card__author">
+            <strong>Amira Khan</strong><span>Customer</span>
+            </div>
+        </article>
+
+        <article class="t-card">
+            <div class="t-quote"><span>&#128515;</span></div>
+            <h3 class="t-card__heading">“Fast & Reliable”</h3>
+            <p class="t-card__text">Deadlines hit, quality high. Couldn’t ask for more from a dev partner.</p>
+            <div class="t-card__author">
+            <strong>Lucas Brown</strong><span>Customer</span>
+            </div>
+        </article>
+
+        <article class="t-card">
+            <div class="t-quote"><span>&#128515;</span></div>
+            <h3 class="t-card__heading">“Results-Oriented”</h3>
+            <p class="t-card__text">They focus on outcomes and it shows. Our KPIs improved significantly.</p>
+            <div class="t-card__author">
+            <strong>Sophia Lee</strong><span>Customer</span>
+            </div>
+        </article>
+        </div>
+
+        <button class="t-nav t-nav--next" aria-label="Next testimonials">
+        <!-- right arrow -->
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true">
+            <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        </button>
+    </div>
+    </section>
+
+    <!-- === Dashboard / Manage Projects === -->
+    <section id="dashboard" class="dash">
+    <div class="container dash__grid">
+        <div class="dash__copy">
+        <p class="kicker">Schedule an Appointment</p>
+        <h2 class="dash__title">Find The Perfect Solutions For Your Needs</h2>
+        <p class="dash__text">
+           At Connection Websites, we understand the importance of personalized attention and tailored solutions for our clients. Whether you have a specific project in mind or simply want to explore how we can help your business grow, we invite you to schedule an appointment with our team of experts. Our dedicated professionals will take the time to understand your unique needs and provide strategic guidance to achieve your goals.
+        </p>
+        </div>
+
+        <div class="dash__media">
+        <!-- Replace src with your real dashboard image -->
+        <img src="img/apponitment-370x400.jpg" alt="Dashboard preview with charts and activity">
+        </div>
+    </div>
+    </section>
+
+    <!-- === Mission • Vision • Approach === -->
+    <section id="mva" class="mva mission-pad">
+    <div class="mva__overlay"></div>
+    <div class="container mva__grid">
+        <article class="mva__item">
+        <span class="mva__num">01.</span>
+        <h3 class="mva__title">Our Mission</h3>
+        <p class="mva__text">
+            Our mission is to empower businesses and individuals with cutting-edge web solutions
+            that drive growth, enhance user experiences, and deliver measurable results. We are
+            committed to providing exceptional web development services that combine creativity,
+            technical expertise, and innovation.
+        </p>
+        </article>
+
+        <article class="mva__item">
+        <span class="mva__num">02.</span>
+        <h3 class="mva__title">Our Vision</h3>
+        <p class="mva__text">
+            Our vision is to be a leading web development company that sets the industry standard
+            for excellence and innovation. We envision a future where businesses of all sizes can
+            leverage the power of the web to thrive and succeed in the digital age.
+        </p>
+        </article>
+
+        <article class="mva__item">
+        <span class="mva__num">03.</span>
+        <h3 class="mva__title">Our Approach</h3>
+        <p class="mva__text">
+            Our approach is centered around collaboration, creativity, and a client-centric mindset.
+            We believe in working closely with our clients to understand their unique business goals,
+            challenges, and target audience.
+        </p>
+        </article>
+    </div>
+    </section>
+
+    <!-- === Dashboard / Manage Projects === -->
+    <section id="dashboard" class="dash">
+    <div class="container dash__grid">
+        <div class="dash__copy">
+        <p class="kicker">Why Choose Us</p>
+        <h2 class="dash__title">We Have All The Expertise You Need</h2>
+        <p class="dash__text">
+           When it comes to web development, we understand that you have a variety of options to choose from. However, we believe that Connection Websites stands out from the competition. Choosing the right web development partner is crucial for the success of your online presence. With our expertise, creative design, timely delivery, and ongoing support, Connection Websites is the ideal choice for your web development needs. Contact us today to discuss how we can bring your vision to life and help your business thrive in the digital world.
+        </p>
+        </div>
+
+        <div class="dash__media">
+        <!-- Replace src with your real dashboard image -->
+        <img src="img/whychoose-370x400.jpg" alt="Dashboard preview with charts and activity">
+        </div>
+    </div>
+    </section>
+
+    <!-- === Blog / From the Blog === -->
+    <section id="blog" class="blog blog-pad">
+    <div class="container blog__head">
+        <p class="blog__kicker">Don’t Miss Latest News</p>
+        <h2 class="blog__title">From the Blog</h2>
+        <p class="blog__sub">Exploring The World, One Article at a Time</p>
+    </div>
+
+    <div class="container post-grid">
+        <!-- Card 1 -->
+        <article class="post-card">
+        <a class="post-card__media" href="#">
+            <img src="img/blog/blog-00001.jpg" alt="Keyboard with code lights">
+        </a>
+        <time class="post-card__date" datetime="2024-01-10">January 10, 2024</time>
+        <h3 class="post-card__title">
+            <a href="#">Choosing the Right Technology Stack for Web Application Development</a>
+        </h3>
+        <a class="post-card__more" href="#">Read More</a>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="post-card">
+        <a class="post-card__media" href="#">
+            <img src="img/blog/blog-00002.jpg" alt="Laptop and phones on desk">
+        </a>
+        <time class="post-card__date" datetime="2024-01-10">January 10, 2024</time>
+        <h3 class="post-card__title">
+            <a href="#">Responsive Web Design: Creating Mobile-Friendly Web Applications</a>
+        </h3>
+        <a class="post-card__more" href="#">Read More</a>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="post-card">
+        <a class="post-card__media" href="#">
+            <img src="img/blog/blog-00003.jpg" alt="Security screen">
+        </a>
+        <time class="post-card__date" datetime="2024-01-10">January 10, 2024</time>
+        <h3 class="post-card__title">
+            <a href="#">Web Application Security: Protecting Your Users and Data</a>
+        </h3>
+        <a class="post-card__more" href="#">Read More</a>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="post-card">
+        <a class="post-card__media" href="#">
+            <img src="img/blog/blog-00004.jpg" alt="Analytics on laptop">
+        </a>
+        <time class="post-card__date" datetime="2024-01-10">January 10, 2024</time>
+        <h3 class="post-card__title">
+            <a href="#">Optimizing Web Application Performance for Better User Experience</a>
+        </h3>
+        <a class="post-card__more" href="#">Read More</a>
+        </article>
+    </div>
+    </section>
+
+    <!-- === Footer === -->
+    <footer class="footer">
+    <div class="container footer__grid">
+        
+        <!-- Contact -->
+        <div class="footer__col">
+        <h4 class="footer__title">Contact With Us</h4>
+        <p><span class="footer__icon">✉</span> contact@connectionwebsites.com</p>
+        <p><span class="footer__icon">📍</span> Orlando, FL US</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer__col">
+        <h4 class="footer__title">Quick Links</h4>
+        <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        </div>
+
+        <!-- Latest News -->
+        <div class="footer__col">
+        <h4 class="footer__title">Latest News</h4>
+        <ul class="footer__news">
+            <li>
+            <a href="blog00001.html">Choosing the Right Technology Stack for Web Application Development</a>
+            <time>January 10, 2024</time>
+            </li>
+            <li>
+            <a href="blog00002.html">Responsive Web Design: Creating Mobile-Friendly Web Applications</a>
+            <time>January 12, 2024</time>
+            </li>
+            <li>
+            <a href="blog00003.html">Web Application Security: Protecting Your Users and Data</a>
+            <time>January 30, 2024</time>
+            </li>
+        </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="footer__col">
+        <h4 class="footer__title">Follow Us On Social</h4>
+        <ul class="footer__links">
+            <li><a href="https://www.facebook.com/p/Connection-Websites-61555057978868/" target="_blank">Facebook</a></li>
+            <li><a href="https://x.com/ConnWebsites" target="_blank">X</a></li>
+            <li><a href="https://www.instagram.com/connectionwebsites/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/company/connection-websites" target="_blank">Linkedin</a></li>
+            <li><a href="https://www.linkedin.com/company/connection-websites" target="_blank">Pinterest</a></li>
+        </ul>
+        </div>
+
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer__bottom">
+        <p>© 2023 Connection Websites LLC. All rights reserved.</p>
+    </div>
+    </footer>
+
+  <script src="script/script.js"></script>
+</body>
+</html>
