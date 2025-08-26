@@ -97,6 +97,22 @@
         <p class="login-meta">New here? <a href="signup.html">Create an account</a></p>
         -->
         </form>
+
+        <!-- Forgot Password Form -->
+        <form class="login-card" id="forgot-form" style="display:none;">
+        <h1 class="login-title">Reset Password</h1>
+        <p class="login-sub">Enter your email to reset your password</p>
+
+        <label class="field">
+            <span>Email</span>
+            <input type="email" name="reset-email" placeholder="you@example.com" required>
+        </label>
+
+        <button class="btn btn--primary btn--lg login-btn" type="submit">Submit</button>
+
+        <p class="login-meta"><a href="#" id="back-to-login">Back to login</a></p>
+        </form>
+
     </div>
     </div>
 
@@ -112,5 +128,24 @@
         btn.setAttribute('aria-label', isHidden ? 'Hide password' : 'Show password');
     });
   </script>
+    <script>
+        const loginForm = document.querySelector('.login-card'); 
+        const forgotForm = document.getElementById('forgot-form');
+        const forgotLink = document.querySelector('.forgot');
+        const backToLogin = document.getElementById('back-to-login');
+
+        forgotLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginForm.style.display = 'none';
+            forgotForm.style.display = 'block';
+        });
+
+        backToLogin.addEventListener('click', (e) => {
+            e.preventDefault();
+            forgotForm.style.display = 'none';
+            loginForm.style.display = 'block';
+        });
+    </script>
+
 </body>
 </html>
