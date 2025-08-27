@@ -111,22 +111,18 @@
         <!-- Form + Map -->
         <div class="contact-grid">
         <!-- Form -->
-        <form class="comment-form" action="./sendmail.php" method="post">
-            <p class="kicker">Get In Touch</p>
-            <h2 class="comment-form__title">Leave a Comment</h2>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hidden"><input name="bot-field" /></p>
 
-            <div class="form-row">
+        <div class="form-row">
             <input type="text" name="name" placeholder="Name*" required>
             <input type="email" name="email" placeholder="Email*" required>
-            </div>
+        </div>
+        <input type="tel" name="phone" placeholder="Your Phone">
+        <textarea name="message" rows="7" placeholder="Your Message*" required></textarea>
 
-            <input type="tel" name="phone" placeholder="Your Phone">
-
-            <textarea name="message" rows="7" placeholder="Your Message*" required></textarea>
-
-            <button class="btn btn--primary btn--pill" type="submit">
-            Submit <span class="arrow">→</span>
-            </button>
+        <button class="btn btn--primary btn--pill" type="submit">Submit <span class="arrow">→</span></button>
         </form>
 
         <!-- Map -->
@@ -207,5 +203,20 @@
     </footer>
 
     <script src="script/script.js"></script>
+
+    <script>
+        const form = document.querySelector('form[name="contact"]');
+        form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        const encoded = new URLSearchParams(data).toString();
+        await fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encoded
+        });
+        window.location = '/thanks.html'; // create this page
+        });
+    </script>
 </body>
 </html>
