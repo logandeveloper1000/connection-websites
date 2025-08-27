@@ -111,18 +111,27 @@
         <!-- Form + Map -->
         <div class="contact-grid">
         <!-- Form -->
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <form class="comment-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <!-- Netlify hidden inputs -->
         <input type="hidden" name="form-name" value="contact">
-        <p class="hidden"><input name="bot-field" /></p>
+        <p class="hidden">
+            <input name="bot-field" />
+        </p>
+
+        <p class="kicker">Get In Touch</p>
+        <h2 class="comment-form__title">Leave a Comment</h2>
 
         <div class="form-row">
             <input type="text" name="name" placeholder="Name*" required>
             <input type="email" name="email" placeholder="Email*" required>
         </div>
+
         <input type="tel" name="phone" placeholder="Your Phone">
         <textarea name="message" rows="7" placeholder="Your Message*" required></textarea>
 
-        <button class="btn btn--primary btn--pill" type="submit">Submit <span class="arrow">→</span></button>
+        <button class="btn btn--primary btn--pill" type="submit">
+            Submit <span class="arrow">→</span>
+        </button>
         </form>
 
         <!-- Map -->
