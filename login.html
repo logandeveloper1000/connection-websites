@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNDHMN99JC"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+
+    // Default: no cookies until the user says yes
+    gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+    });
+
+    gtag('js', new Date());
+    // DO NOT call gtag('config', 'G-FNDHMN99JC') here — we'll do it after consent.
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Connection Websites - About</title>
@@ -115,6 +133,81 @@
 
     </div>
     </div>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Cookie consent">
+    <div class="cookie-banner__inner">
+        <p class="cookie-banner__text">
+        We use cookies to analyze traffic and improve your experience. 
+        <a href="privacy.html" class="cookie-banner__link">Learn more</a>.
+        </p>
+        <div class="cookie-banner__actions">
+        <button class="cookie-btn cookie-btn--secondary" id="cookie-decline">Decline</button>
+        <button class="cookie-btn cookie-btn--primary" id="cookie-accept">Accept</button>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        (function(){
+        const KEY = 'cw_cookie_consent'; // localStorage key
+        const banner = document.getElementById('cookie-banner');
+        const acceptBtn = document.getElementById('cookie-accept');
+        const declineBtn = document.getElementById('cookie-decline');
+        const openManager = document.getElementById('open-cookie-manager');
+
+        // Apply a consent state to gtag and optionally init GA config
+        function applyConsent(state){
+            const granted = (state === 'granted');
+            gtag('consent', 'update', {
+            'ad_storage': granted ? 'granted' : 'denied',
+            'analytics_storage': granted ? 'granted' : 'denied',
+            'ad_user_data': granted ? 'granted' : 'denied',
+            'ad_personalization': granted ? 'granted' : 'denied'
+            });
+
+            // Only configure GA after a "granted"
+            if (granted) {
+            gtag('config', 'G-FNDHMN99JC', {
+                'anonymize_ip': true
+            });
+            }
+        }
+
+        // Show banner if no decision yet
+        const saved = localStorage.getItem(KEY);
+        if (!saved) {
+            banner.style.display = 'block';
+        } else {
+            applyConsent(saved); // honor previous choice
+        }
+
+        // Accept
+        if (acceptBtn) {
+            acceptBtn.addEventListener('click', function(){
+            localStorage.setItem(KEY, 'granted');
+            applyConsent('granted');
+            banner.style.display = 'none';
+            });
+        }
+
+        // Decline
+        if (declineBtn) {
+            declineBtn.addEventListener('click', function(){
+            localStorage.setItem(KEY, 'denied');
+            applyConsent('denied');
+            banner.style.display = 'none';
+            });
+        }
+
+        // Manage link (re-open banner)
+        if (openManager) {
+            openManager.addEventListener('click', function(){
+            banner.style.display = 'block';
+            });
+        }
+        })();
+    </script>
 
   <script src="script/script.js"></script>
   <script>
