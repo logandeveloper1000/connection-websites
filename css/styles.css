@@ -1164,8 +1164,33 @@ body.dark .about__title{ color:#fff; } /* if you later add dark theme */
 .mosaic figure{ margin:0; border-radius:12px; overflow:hidden; background:#0e1428; }
 .mosaic img{ width:100%; height:100%; object-fit:cover; display:block; }
 .mosaic .big{ grid-column: 1 / -1; grid-row: span 2; }   /* big spans 2 rows, full width */
-/* .mosaic .sml{ }                                         two small squares */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .mosaic .sml{ }                                         two small squares =================================================== */
 .mosaic .med{ grid-column: 1 / -1; }                    /* medium full width */
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Right column */
 .modal-right .mod-kicker{
